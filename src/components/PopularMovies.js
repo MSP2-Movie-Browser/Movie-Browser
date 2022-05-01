@@ -8,9 +8,9 @@ function PopularMovies() {
 
     // function here to retrieve list of trending movies from server via api
     useEffect(() => {
-        const API_URL = 'http://localhost:4000/movie/popular'
+        // const API_URL = 'http://localhost:3005/movie/popular'
         const fetchData = async () => {
-            const response = await fetch(API_URL)
+            const response = await fetch('/movie/popular')
             const resData = await response.json()
             setMovieData(resData.results)
         }
@@ -20,7 +20,7 @@ function PopularMovies() {
     const popularMovies = movieData.map((movie, i) => {
         return (
             <Link to={`movie/${movie.id}`}>
-                <Card style={{ width: '18rem' , margin: '2em'}} key={i}>
+                <Card style={{ width: '18rem' , margin: '2em', textAlign: 'center'}} key={i}>
                     <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} style={{ width: '18em'}} />
                     <Card.Body>
                         <Card.Title>{movie.original_title}</Card.Title>
