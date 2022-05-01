@@ -24,19 +24,29 @@ function ReviewView() {
         // const res = str !== undefined ? str.substring(0) : " "
         return (
             <Link to={'/my-reviews'}>
-                <Card style={{ width: '20rem' , margin: '2em'}} key={i}>
+                <Card style={{ width: '80rem' , margin: '2em'}} key={i}>
                     {/* <Card.Img variant="top" src={res} alt={review.results} style={{ width: '18em'}} /> */}
                     <Card.Body>
-                        <Card.Title>{review.content}</Card.Title>
-                        <Card.Text>{review.content}
-                        {review.content}</Card.Text>
+                        <Card.Title>{review.author}</Card.Title>
+                        <Card.Text>{review.movieTitle}</Card.Text>
+                        <Card.Text>{review.content}</Card.Text>
                         {/* <Card.Text>{res}</Card.Text> */}
                     </Card.Body>
                 </Card>
             </Link>
         )
+        })
+    
+
+        return (
+            <div>
+                    <div style={{ display: 'flex' , flexDirection: 'row' , flexWrap: 'wrap' }}>
+                        {reviewData.length > 0 ? review : <h2>Loading...</h2>} 
+                    </div>
+            </div>
+        );
         
-    })
+    }
 
     // return (
     //     <div>
@@ -57,7 +67,7 @@ function ReviewView() {
     //     </div>
 	// );
    
-}
+
 
 export default ReviewView
 

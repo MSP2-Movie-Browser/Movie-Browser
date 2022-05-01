@@ -25,23 +25,22 @@ function Reviews() {
     useEffect(() => {
         const fetchData = async () => {
             // const response = await fetch(`/review/${id}`)
-            const response = await fetch('/review/new')
+            const response = await fetch(`/review/${id}`)
             const resData = await response.json()
-            setReviewData(resData.review)
+            setReviewData(resData.results)
         }
         fetchData()
     }, [id])
 
     const review = reviewData.map((review, i) => {
-        let str = review.avatar_path
-        const res = str !== undefined ? str.substring(0) : " "
+        // let str = review.avatar_path
+        // const res = str !== undefined ? str.substring(0) : " "
         return (
             <Link to={`review/${review.id}`}>
                 <Card style={{ width: '80rem' , margin: '2em'}} key={i}>
-                    <Card.Img variant="top" src={res} alt={review.results} style={{ width: '18em'}} />
+                    {/* <Card.Img variant="top" src={res} alt={review.results} style={{ width: '18em'}} /> */}
                     <Card.Body>
                         <Card.Title>{review.author}</Card.Title>
-                        <Card.Text>{review.movieTitle}</Card.Text>
                         <Card.Text>{review.content}</Card.Text>
 
                         {/* <Card.Text>{res}</Card.Text> */}
