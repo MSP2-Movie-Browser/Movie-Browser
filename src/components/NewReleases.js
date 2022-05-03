@@ -22,7 +22,7 @@ function NewReleases() {
         return (
             <Link to={`movie/${movie.id}`} key={i}>
                 <Card style={{ width: '18rem' , margin: '2em'}}>
-                    <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} style={{ width: '18em'}} />
+                    {/* <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} style={{ width: '18em'}} /> */}
                     <Card.Body>
                         <Card.Title>{movie.original_title}</Card.Title>
                     </Card.Body>
