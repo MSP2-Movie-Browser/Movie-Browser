@@ -13,7 +13,6 @@ import ReviewView from './components/ReviewView';
 
 function App() {
   
-
   return (
     <Router>
       <Navbar />

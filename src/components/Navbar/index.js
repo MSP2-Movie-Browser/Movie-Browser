@@ -18,10 +18,10 @@ const Navbar = () => {
           </NavLink>
         <Bars />
         <NavMenu>
-          {/* <NavLink to='/about' activeStyle>
+          {/* <NavLink to='/about' activestyle='true'>
             About
           </NavLink> */}
-          <NavLink to='/favorites' activeStyle>
+          <NavLink to='/favorites' activestyle='true'>
             Favorites
           </NavLink>
           <NavLink to='/my-reviews' activeStyle>

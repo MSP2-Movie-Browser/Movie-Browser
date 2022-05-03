@@ -9,7 +9,6 @@ function ActorView() {
 
     // Get actor data from API
     useEffect(() => {
-        // const API_URL = `http://localhost:4000/person/${id}`
         const fetchData = async () => {
             const response = await fetch(`/actor/${id}`)
             const resData = await response.json()
@@ -20,7 +19,6 @@ function ActorView() {
 
     // Get actor filmography from API
     useEffect(() => {
-        // const API_URL = `http://localhost:4000/person/${id}/credits`
         const fetchData = async () => {
             const response = await fetch(`/actor/filmography/${id}`)
             const resData = await response.json()

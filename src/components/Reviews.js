@@ -4,7 +4,6 @@ import { Badge, Card } from "react-bootstrap"
 
 
 function Reviews() {
-
     // function to return list of reviews from server
     // const [movieData, setMovieData] = useState([])
     const [reviewData, setReviewData] = useState([])
@@ -61,7 +60,6 @@ function Reviews() {
                 </Badge>
         </div>
 	);
-   
 }
 
-export default Reviews
+export default Reviews;

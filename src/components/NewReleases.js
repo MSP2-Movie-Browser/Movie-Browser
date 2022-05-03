@@ -9,7 +9,6 @@ function NewReleases() {
 
     // function to retrieve list of new movies from server via api
     useEffect(() => {
-        // const API_URL = 'http://localhost:4000/movie/now_playing'
         const fetchData = async () => {
             const response = await fetch('/movie/new_releases')
             const resData = await response.json()
@@ -22,8 +21,9 @@ function NewReleases() {
         let str = movie.release_date
         let res = str.substring(5, 10) + "-" + str.substring(0, 4)
         return (
-            <Link to={`movie/${movie.id}`}>
-                <Card style={{ width: '18rem' , margin: '2em', textAlign: 'center'}} key={i}>
+
+            <Link to={`movie/${movie.id}`} key={i}>
+                <Card style={{ width: '18rem' , margin: '2em', textAlign: 'center'}}
                     <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.original_title} style={{ width: '18em'}} />
                     <Card.Body>
                         <Card.Title>{movie.original_title}</Card.Title>

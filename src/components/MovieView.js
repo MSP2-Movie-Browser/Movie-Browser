@@ -1,5 +1,3 @@
-
-   
 import { useEffect, useState } from "react"
 import { Badge, Card } from "react-bootstrap"
 import { Link, useParams } from "react-router-dom"
@@ -107,4 +105,4 @@ function MovieView() {
     )
 }
 
-export default MovieView
+export default MovieView;
